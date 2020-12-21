@@ -1,0 +1,8 @@
+<h1>Hogwarts Courses</h1>
+<% @courses.each do |course| %>
+<hr>
+<h2><%= "#{course.name}: #{course.count_students}" %></h2>
+<% course.students.order_by_name.each do |student| %>
+<h3><%= student.name %></h3>
+  <% end %>
+  <% end %>
